@@ -28,7 +28,14 @@ Fond principal noir (#000000) avec des accents cyan (#00D4FF), violet (#B794F6) 
 
 ## 🛠️ Stack Technique
 
-Next.js 15 avec App Router, TypeScript pour la robustesse, Tailwind CSS pour le styling, Framer Motion pour les animations, et Lucide React pour les icônes. Base de données PostgreSQL avec authentification JWT et système d'upload avec Multer + File System.
+- **Framework** : Next.js 15 (App Router)
+- **Language** : TypeScript
+- **Styling** : Tailwind CSS
+- **Animations** : Framer Motion
+- **Icônes** : Lucide React
+- **Base de données** : PostgreSQL
+- **Authentification** : JWT
+- **Upload** : Multer + File System
 
 ## 📁 Structure du Projet
 
@@ -114,10 +121,17 @@ npm run dev
 ## 📱 Pages Disponibles
 
 ### Interface Publique
-Page d'accueil (/) avec hero section, compétences et projets. Galerie interactive des projets (/projets) et formulaire de contact animé (/contact).
+- **/** : Page d'accueil avec hero, compétences et projets
+- **/projets** : Galerie interactive des projets
+- **/contact** : Formulaire de contact animé
 
 ### Interface d'Administration
-Dashboard principal (/admin) avec gestionnaire de documents par dossiers, gestion des diplômes avec synchronisation automatique, gestion des projets avec upload d'images, gestion des technologies et compétences, et gestion du profil utilisateur.
+- **/admin** : Dashboard principal
+  - Gestionnaire de documents avec navigation par dossiers
+  - Gestion des diplômes et synchronisation automatique
+  - Gestion des projets avec upload d'images
+  - Gestion des technologies et compétences
+  - Gestion du profil utilisateur
 
 ## 🖼️ Captures d'Écran
 
@@ -147,11 +161,25 @@ Galerie interactive avec filtres, upload d'images de couverture et galeries, tec
 
 ## 🎯 Composants UI
 
-**Composants de base** : Button avec animations, Card avec effets glassmorphism, Input stylisés, Modal avec animations, et système de notifications.
+### Composants de Base
+- `Button` : Boutons avec animations
+- `Card` : Cartes avec effets glassmorphism
+- `Input` : Champs de saisie stylisés
+- `Modal` : Modales avec animations
+- `Notification` : Système de notifications
 
-**Composants avancés** : AnimatedCounter, Typewriter, GlitchText, ParticleField, et MatrixRain pour des effets visuels spectaculaires.
+### Composants Avancés
+- `AnimatedCounter` : Compteurs animés
+- `Typewriter` : Effet machine à écrire
+- `GlitchText` : Texte avec effet glitch
+- `ParticleField` : Champ de particules animées
+- `MatrixRain` : Effet pluie de code Matrix
 
-**Composants admin** : DocumentManager complet, ProfileManager, FeaturedProjectsManager, et AdminSidebar pour une navigation d'administration fluide.
+### Composants Admin
+- `DocumentManager` : Gestionnaire de documents complet
+- `ProfileManager` : Gestion du profil utilisateur
+- `FeaturedProjectsManager` : Gestion des projets mis en avant
+- `AdminSidebar` : Navigation d'administration
 
 ## 🎨 Personnalisation
 
