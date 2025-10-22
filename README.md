@@ -17,36 +17,18 @@ Un portfolio professionnel spectaculaire développé avec **Next.js 15**, **Type
 ## 🚀 Fonctionnalités
 
 ### 🌐 Interface Publique
-- **Design Ultra-Moderne** : Interface inspirée d'Apple avec effets glassmorphism
-- **Animations Avancées** : Framer Motion pour des transitions fluides
-- **Responsive Design** : Optimisé pour tous les appareils
-- **Performance Optimale** : Images optimisées et lazy loading
-- **Effets Visuels** : Background animé, particules, effets de glitch
+Interface moderne inspirée d'Apple avec effets glassmorphism, animations fluides grâce à Framer Motion, et design responsive optimisé pour tous les appareils. Performance optimale avec images optimisées, lazy loading, et effets visuels spectaculaires (background animé, particules, effets de glitch).
 
 ### 🔐 Interface d'Administration
-- **Gestionnaire de Documents** : Navigation par dossiers, upload drag & drop, sélection multiple
-- **Gestion des Diplômes** : CRUD complet avec synchronisation automatique
-- **Gestion des Projets** : Projets avec images et technologies associées
-- **Sécurité** : Dossiers protégés avec authentification JWT
-- **Cache Intelligent** : Performance optimisée avec système de cache
+Gestionnaire de documents complet avec navigation par dossiers, upload drag & drop, et sélection multiple. Système de gestion des diplômes avec CRUD complet et synchronisation automatique. Gestion des projets avec images et technologies associées. Sécurité renforcée avec dossiers protégés et authentification JWT, le tout optimisé par un système de cache intelligent.
 
 ## 🎨 Palette de Couleurs
 
-- **Fond principal** : Noir (#000000)
-- **Accents** : Cyan (#00D4FF), Violet (#B794F6), Pink (#F093FB)
-- **Textes** : Blanc (#FFFFFF), Gris (#A1A1AA)
-- **Glassmorphism** : rgba(255,255,255,0.08) + blur(14px)
+Fond principal noir (#000000) avec des accents cyan (#00D4FF), violet (#B794F6) et pink (#F093FB). Textes en blanc (#FFFFFF) et gris (#A1A1AA) pour une excellente lisibilité. Effets glassmorphism avec rgba(255,255,255,0.08) + blur(14px) pour un rendu moderne et élégant.
 
 ## 🛠️ Stack Technique
 
-- **Framework** : Next.js 15 (App Router)
-- **Language** : TypeScript
-- **Styling** : Tailwind CSS
-- **Animations** : Framer Motion
-- **Icônes** : Lucide React
-- **Base de données** : PostgreSQL
-- **Authentification** : JWT
-- **Upload** : Multer + File System
+Next.js 15 avec App Router, TypeScript pour la robustesse, Tailwind CSS pour le styling, Framer Motion pour les animations, et Lucide React pour les icônes. Base de données PostgreSQL avec authentification JWT et système d'upload avec Multer + File System.
 
 ## 📁 Structure du Projet
 
@@ -132,123 +114,44 @@ npm run dev
 ## 📱 Pages Disponibles
 
 ### Interface Publique
-- **/** : Page d'accueil avec hero, compétences et projets
-- **/projets** : Galerie interactive des projets
-- **/contact** : Formulaire de contact animé
+Page d'accueil (/) avec hero section, compétences et projets. Galerie interactive des projets (/projets) et formulaire de contact animé (/contact).
 
 ### Interface d'Administration
-- **/admin** : Dashboard principal
-  - Gestionnaire de documents avec navigation par dossiers
-  - Gestion des diplômes et synchronisation automatique
-  - Gestion des projets avec upload d'images
-  - Gestion des technologies et compétences
-  - Gestion du profil utilisateur
+Dashboard principal (/admin) avec gestionnaire de documents par dossiers, gestion des diplômes avec synchronisation automatique, gestion des projets avec upload d'images, gestion des technologies et compétences, et gestion du profil utilisateur.
 
 ## 🖼️ Captures d'Écran
 
 ### Page d'Accueil
-La page d'accueil présente une interface moderne avec :
-- **Hero Section** : Animation de texte avec effets visuels
-- **Compétences** : Affichage des technologies maîtrisées
-- **Projets** : Galerie interactive des réalisations
-- **Contact** : Formulaire animé avec validation
+Interface moderne avec hero section animée, affichage des technologies maîtrisées, galerie interactive des réalisations, et formulaire de contact animé avec validation.
 
 ### Interface d'Administration
-Le dashboard admin offre :
-- **Navigation intuitive** : Breadcrumb et bouton de retour
-- **Gestion de fichiers** : Upload drag & drop, sélection multiple
-- **Dossiers sécurisés** : Protection des documents sensibles
-- **Synchronisation** : Sync automatique des diplômes
+Dashboard avec navigation intuitive (breadcrumb et bouton de retour), gestion de fichiers (upload drag & drop, sélection multiple), dossiers sécurisés pour la protection des documents sensibles, et synchronisation automatique des diplômes.
 
 ## 🔐 Système d'Authentification
 
-### Connexion Admin
-- Accès via `/admin`
-- Authentification JWT
-- Session persistante
-- Protection des routes sensibles
-
-### Gestion des Permissions
-- Dossiers sécurisés (🔒) : Accès restreint
-- Fichiers protégés : Téléchargement uniquement
-- Actions conditionnelles selon les permissions
+Accès admin via `/admin` avec authentification JWT et session persistante. Protection des routes sensibles avec dossiers sécurisés (🔒) pour accès restreint, fichiers protégés en téléchargement uniquement, et actions conditionnelles selon les permissions.
 
 ## 📊 Gestionnaire de Documents
 
-### Fonctionnalités Principales
-- **Navigation par dossiers** : Interface type explorateur de fichiers
-- **Upload Drag & Drop** : Glisser-déposer pour uploader
-- **Sélection multiple** : Actions en masse (télécharger, supprimer)
-- **Recherche et filtrage** : Trouver rapidement les fichiers
-- **Breadcrumb navigation** : Navigation claire avec chemin d'accès
-- **Cache intelligent** : Performance optimisée
+Navigation par dossiers avec interface type explorateur de fichiers, upload drag & drop, sélection multiple pour actions en masse, recherche et filtrage avancés, breadcrumb navigation claire, et cache intelligent pour des performances optimales.
 
-### Structure des Dossiers
-```
-📁 Mes Documents (Racine)
-├── 📁 Mes CV (Sécurisé)
-│   └── 📄 CV_Ambroise_Krzanowski.pdf
-├── 📁 Mes Diplômes (Sécurisé)
-│   ├── 📁 [Diplôme] - [Date]
-│   └── 📁 [Diplôme] - [Date]
-└── 📄 Documents généraux
-```
-
-### Types de Fichiers Supportés
-- **Documents** : PDF, DOC, DOCX, TXT
-- **Images** : PNG, JPG, JPEG, GIF, SVG
-- **Archives** : ZIP, RAR (à implémenter)
+**Structure** : Mes Documents (racine) → Mes CV (sécurisé) + Mes Diplômes (sécurisé) avec sous-dossiers par diplôme, plus documents généraux. Support des formats PDF, DOC, DOCX, TXT, PNG, JPG, JPEG, GIF, SVG.
 
 ## 🎓 Gestion des Diplômes
 
-### Synchronisation Automatique
-- **Création automatique** : Dossier créé pour chaque diplôme
-- **Nommage intelligent** : `[Titre] - [Date]`
-- **Fichiers associés** : Tous les fichiers liés au diplôme
-- **Synchronisation** : Bouton "Sync Diplômes" dans le dossier "Mes Diplômes"
-
-### Interface de Gestion
-- **CRUD complet** : Créer, lire, modifier, supprimer
-- **Upload de fichiers** : Multiple fichiers par diplôme
-- **Métadonnées** : Titre, date, description
-- **Prévisualisation** : Aperçu des fichiers
+Synchronisation automatique avec création de dossiers pour chaque diplôme, nommage intelligent `[Titre] - [Date]`, association de tous les fichiers liés, et bouton "Sync Diplômes" dans le dossier "Mes Diplômes". Interface de gestion complète avec CRUD, upload multiple de fichiers par diplôme, métadonnées (titre, date, description), et prévisualisation des fichiers.
 
 ## 🚀 Gestion des Projets
 
-### Fonctionnalités
-- **Galerie interactive** : Affichage des projets avec filtres
-- **Upload d'images** : Images de couverture et galeries
-- **Technologies associées** : Tags et compétences
-- **Statut** : Projets en cours, terminés, archivés
-- **Liens externes** : GitHub, démo, documentation
-
-### Interface Admin
-- **Gestion complète** : CRUD avec interface intuitive
-- **Upload d'images** : Drag & drop pour les images
-- **Gestion des technologies** : Association des compétences
-- **Prévisualisation** : Aperçu en temps réel
+Galerie interactive avec filtres, upload d'images de couverture et galeries, technologies associées avec tags et compétences, gestion des statuts (en cours, terminés, archivés), et liens externes (GitHub, démo, documentation). Interface admin complète avec CRUD intuitif, upload drag & drop pour les images, gestion des technologies, et prévisualisation en temps réel.
 
 ## 🎯 Composants UI
 
-### Composants de Base
-- `Button` : Boutons avec animations
-- `Card` : Cartes avec effets glassmorphism
-- `Input` : Champs de saisie stylisés
-- `Modal` : Modales avec animations
-- `Notification` : Système de notifications
+**Composants de base** : Button avec animations, Card avec effets glassmorphism, Input stylisés, Modal avec animations, et système de notifications.
 
-### Composants Avancés
-- `AnimatedCounter` : Compteurs animés
-- `Typewriter` : Effet machine à écrire
-- `GlitchText` : Texte avec effet glitch
-- `ParticleField` : Champ de particules animées
-- `MatrixRain` : Effet pluie de code Matrix
+**Composants avancés** : AnimatedCounter, Typewriter, GlitchText, ParticleField, et MatrixRain pour des effets visuels spectaculaires.
 
-### Composants Admin
-- `DocumentManager` : Gestionnaire de documents complet
-- `ProfileManager` : Gestion du profil utilisateur
-- `FeaturedProjectsManager` : Gestion des projets mis en avant
-- `AdminSidebar` : Navigation d'administration
+**Composants admin** : DocumentManager complet, ProfileManager, FeaturedProjectsManager, et AdminSidebar pour une navigation d'administration fluide.
 
 ## 🎨 Personnalisation
 
