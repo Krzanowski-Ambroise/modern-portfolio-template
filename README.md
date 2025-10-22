@@ -1,6 +1,8 @@
 # Portfolio Cybersécurité Ultra-Moderne
 
-Un portfolio professionnel spectaculaire pour un expert en cybersécurité, développé avec Next.js 15, TypeScript et Tailwind CSS. Inclut un système complet de gestion de documents, diplômes et projets avec interface d'administration.
+Un portfolio professionnel spectaculaire développé avec **Next.js 15**, **TypeScript** et **Tailwind CSS**. Inclut un système complet de gestion de documents, diplômes et projets avec interface d'administration.
+
+> **Développé avec ❤️ et Claude AI** en mode **VibeCoding** - Une approche collaborative entre humain et IA pour créer des solutions innovantes.
 
 ## 📸 Aperçu du Projet
 
@@ -20,17 +22,13 @@ Un portfolio professionnel spectaculaire pour un expert en cybersécurité, dév
 - **Responsive Design** : Optimisé pour tous les appareils
 - **Performance Optimale** : Images optimisées et lazy loading
 - **Effets Visuels** : Background animé, particules, effets de glitch
-- **Composants UI** : Bibliothèque complète de composants réutilisables
 
 ### 🔐 Interface d'Administration
-- **Gestionnaire de Documents** : Système complet de gestion de fichiers et dossiers
-- **Gestion des Diplômes** : Interface pour gérer les diplômes et leurs fichiers associés
-- **Gestion des Projets** : CRUD complet pour les projets avec images
-- **Gestion des Technologies** : Système de tags et compétences
-- **Synchronisation Automatique** : Sync automatique des diplômes avec le gestionnaire de documents
-- **Sécurité** : Dossiers et fichiers protégés avec authentification
-- **Upload Drag & Drop** : Interface moderne pour l'upload de fichiers
-- **Sélection Multiple** : Actions en masse (téléchargement, suppression)
+- **Gestionnaire de Documents** : Navigation par dossiers, upload drag & drop, sélection multiple
+- **Gestion des Diplômes** : CRUD complet avec synchronisation automatique
+- **Gestion des Projets** : Projets avec images et technologies associées
+- **Sécurité** : Dossiers protégés avec authentification JWT
+- **Cache Intelligent** : Performance optimisée avec système de cache
 
 ## 🎨 Palette de Couleurs
 
@@ -102,66 +100,34 @@ portfolio/
 └── README.md
 ```
 
-## 🚀 Installation
+## 🚀 Installation Rapide
 
-### 1. Prérequis
+### 1. **Prérequis**
 - Node.js 18+ 
 - PostgreSQL 12+
-- npm ou yarn
 
-### 2. Installation du projet
+### 2. **Installation**
 ```bash
-# Cloner le projet
-git clone <repository-url>
-cd portfolio
-
-# Installer les dépendances
+# Cloner et installer
+git clone https://github.com/Krzanowski-Ambroise/modern-portfolio-template.git
+cd modern-portfolio-template
 npm install
-```
 
-### 3. Configuration de la base de données
-```bash
-# Créer la base de données PostgreSQL
+# Configurer la base de données
 createdb portfolio
+cp config.example.js .env.local
+# Éditer .env.local avec vos paramètres
 
-# Configurer les variables d'environnement
-cp .env.example .env.local
-```
-
-### 4. Variables d'environnement
-Créez un fichier `.env.local` avec :
-```env
-# Base de données PostgreSQL
-DATABASE_URL=postgresql://username:password@localhost:5432/portfolio
-
-# Configuration PostgreSQL (pour les scripts)
-DB_USER=postgres
-DB_HOST=localhost
-DB_DATABASE=portfolio
-DB_PASSWORD=your_password
-DB_PORT=5432
-
-# JWT Secret
-JWT_SECRET=your_jwt_secret_here
-```
-
-### 5. Initialisation de la base de données
-```bash
-# Initialiser la base de données
+# Initialiser la DB
 node scripts/init-postgres-simple.cjs
 
-# Synchroniser les diplômes (optionnel)
-node scripts/sync-diplomas-to-documents.cjs
-```
-
-### 6. Lancement du serveur
-```bash
-# Serveur de développement
+# Lancer le serveur
 npm run dev
-
-# Ouvrir dans le navigateur
-http://localhost:3000
 ```
+
+### 3. **Accès**
+- **Portfolio** : http://localhost:3000
+- **Admin** : http://localhost:3000/admin
 
 ## 📱 Pages Disponibles
 
@@ -437,19 +403,27 @@ Les contributions sont les bienvenues ! N'hésitez pas à :
 4. Push vers la branche (`git push origin feature/AmazingFeature`)
 5. Ouvrir une Pull Request
 
-## 🎯 Roadmap
+## 🤖 Développement Collaboratif
 
-### Fonctionnalités à venir
-- [ ] **Système de rôles** : Multi-utilisateurs avec permissions
-- [ ] **API REST complète** : Endpoints pour intégrations externes
-- [ ] **Système de backup** : Sauvegarde automatique des documents
-- [ ] **Recherche avancée** : Recherche full-text dans les documents
-- [ ] **Versioning** : Historique des versions de fichiers
-- [ ] **Collaboration** : Partage de dossiers entre utilisateurs
-- [ ] **Analytics** : Statistiques d'utilisation et de performance
+Ce projet a été développé en **collaboration étroite entre humain et IA** :
+
+### 🧠 **VibeCoding avec Claude AI**
+- **Approche collaborative** : Développement en binôme humain-IA
+- **Itération rapide** : Feedback continu et améliorations instantanées
+- **Résolution de problèmes** : Solutions innovantes grâce à la collaboration
+- **Code quality** : Standards élevés grâce à l'assistance IA
+
+### 🎯 **Prochaines Évolutions**
+- **Système de Blog** : Articles sur les découvertes, guides d'installation, tutoriels
+- **Système de Connexion** : Authentification utilisateur pour accéder au blog
+- **API REST complète** : Endpoints pour intégrations externes
+- **Recherche avancée** : Recherche full-text dans les documents et articles
+- **Système de rôles** : Multi-utilisateurs avec permissions
+- **Analytics** : Statistiques d'utilisation et de performance
+- **Collaboration** : Partage de dossiers et articles entre utilisateurs
 
 ---
 
 **Développé avec ❤️ par Ambroise Krzanowski**
 
-*Portfolio professionnel avec système de gestion de documents intégré*
+*Portfolio professionnel avec système de gestion de documents intégré - Créé en collaboration avec Claude AI en mode VibeCoding*
