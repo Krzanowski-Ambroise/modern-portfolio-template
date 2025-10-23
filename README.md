@@ -1,257 +1,290 @@
-# Portfolio Cybersécurité Ultra-Moderne
+Parfait 💪 Voici à nouveau **le fichier complet `README.md`**, formaté pour GitHub, 100 % copiable-collable, sans coupure ni bug.
+Il exploite **tout le potentiel du Markdown** (badges, alignement HTML, table des matières cliquable, emojis, séparateurs, blocs de code, etc.).
 
-Un portfolio professionnel spectaculaire développé avec **Next.js 15**, **TypeScript** et **Tailwind CSS**. Inclut un système complet de gestion de documents, diplômes et projets avec interface d'administration.
+---
 
-> **Développé avec ❤️ et Claude AI** en mode **VibeCoding** - Une approche collaborative entre humain et IA pour créer des solutions innovantes.
+````markdown
+<!-- TITLE -->
+<h1 align="center">⚡ Portfolio Cybersécurité Ultra-Moderne ⚡</h1>
 
-## 📸 Aperçu du Projet
+<p align="center">
+  <em>Un portfolio professionnel nouvelle génération pour présenter vos projets, diplômes et compétences en cybersécurité.</em>
+</p>
 
-### 🏠 Page d'Accueil
-![Page d'Accueil](gitimg/exemple_accueil.png)
-*Interface moderne avec animations et effets visuels*
+<p align="center">
+  <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js" alt="Next.js"></a>
+  <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript" alt="TypeScript"></a>
+  <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/TailwindCSS-3-38B2AC?style=for-the-badge&logo=tailwindcss" alt="TailwindCSS"></a>
+  <a href="https://www.postgresql.org/"><img src="https://img.shields.io/badge/PostgreSQL-15-336791?style=for-the-badge&logo=postgresql" alt="PostgreSQL"></a>
+  <a href="https://framer.com/motion"><img src="https://img.shields.io/badge/Framer_Motion-Animations-0055FF?style=for-the-badge&logo=framer" alt="Framer Motion"></a>
+</p>
 
-### 🔐 Interface d'Administration
-![Dashboard Admin](gitimg/exemple_dashboard.png)
-*Gestionnaire de documents avec navigation par dossiers*
+---
 
-## 🚀 Fonctionnalités
+> 🧠 **Développé avec ❤️ et Claude AI** en mode **VibeCoding** — une collaboration humain + IA pour créer une expérience élégante et performante.
 
-### 🌐 Interface Publique
-Interface moderne inspirée d'Apple avec effets glassmorphism, animations fluides grâce à Framer Motion, et design responsive optimisé pour tous les appareils. Performance optimale avec images optimisées, lazy loading, et effets visuels spectaculaires (background animé, particules, effets de glitch).
+---
 
-### 🔐 Interface d'Administration
-Gestionnaire de documents complet avec navigation par dossiers, upload drag & drop, et sélection multiple. Système de gestion des diplômes avec CRUD complet et synchronisation automatique. Gestion des projets avec images et technologies associées. Sécurité renforcée avec dossiers protégés et authentification JWT, le tout optimisé par un système de cache intelligent.
+## 🧭 Table des Matières
 
-## 🎨 Palette de Couleurs
+- [🎯 Aperçu](#-aperçu)
+- [🚀 Fonctionnalités](#-fonctionnalités)
+- [🎨 Design & Couleurs](#-design--couleurs)
+- [🛠️ Stack Technique](#️-stack-technique)
+- [📁 Structure du Projet](#-structure-du-projet)
+- [⚡ Installation Rapide](#-installation-rapide)
+- [📂 Pages Principales](#-pages-principales)
+- [🔐 Authentification & Sécurité](#-authentification--sécurité)
+- [🎓 Gestion des Diplômes](#-gestion-des-diplômes)
+- [🗂️ Gestionnaire de Documents](#️-gestionnaire-de-documents)
+- [🖼️ Gestion des Projets](#-gestion-des-projets)
+- [🧩 Composants UI](#-composants-ui)
+- [📊 Performances](#-performances)
+- [🧰 Scripts Disponibles](#-scripts-disponibles)
+- [☁️ Déploiement](#️-déploiement)
+- [🤝 Contribution](#-contribution)
+- [🤖 Collaboration IA](#-collaboration-ia)
+- [📜 Licence](#-licence)
 
-Fond principal noir (#000000) avec des accents cyan (#00D4FF), violet (#B794F6) et pink (#F093FB). Textes en blanc (#FFFFFF) et gris (#A1A1AA) pour une excellente lisibilité. Effets glassmorphism avec rgba(255,255,255,0.08) + blur(14px) pour un rendu moderne et élégant.
+---
 
-## 🛠️ Stack Technique
+## 🎯 Aperçu  
 
-- **Framework** : Next.js 15 (App Router)
-- **Language** : TypeScript
-- **Styling** : Tailwind CSS
-- **Animations** : Framer Motion
-- **Icônes** : Lucide React
-- **Base de données** : PostgreSQL
-- **Authentification** : JWT
-- **Upload** : Multer + File System
+### 🏠 Page d’Accueil  
+![Page d'accueil](gitimg/exemple_accueil.png)  
+*Interface élégante, animations fluides et effets glassmorphism.*
 
-## 📁 Structure du Projet
+### 🔐 Interface d’Administration  
+![Dashboard Admin](gitimg/exemple_dashboard.png)  
+*Gestionnaire de documents moderne avec navigation intuitive.*
 
-```
+---
+
+## 🚀 Fonctionnalités  
+
+### 🌐 Interface Publique  
+- Design inspiré d’**Apple**, **animations Framer Motion**, **effets glassmorphism**
+- Performance optimisée : **lazy loading**, **cache intelligent**, **Next.js Image**
+- Effets visuels : particules, glitch, background animé  
+
+### 🔒 Interface d’Administration  
+- CRUD complet pour **documents**, **diplômes**, **projets**, **technologies**, **profil**
+- Upload **drag & drop**, sélection multiple, breadcrumb clair  
+- Authentification **JWT**, dossiers protégés, cache intelligent  
+
+---
+
+## 🎨 Design & Couleurs  
+
+| Élément | Couleur | Description |
+|----------|----------|-------------|
+| Fond principal | `#000000` | Noir pur |
+| Accent cyan | `#00D4FF` | Couleur principale |
+| Accent violet | `#B794F6` | Équilibre des tons |
+| Accent rose | `#F093FB` | Touche vivante |
+| Texte principal | `#FFFFFF` | Blanc pur |
+| Texte secondaire | `#A1A1AA` | Gris doux |
+
+🎨 **Effet glassmorphism** : `rgba(255,255,255,0.08)` + `blur(14px)`  
+
+---
+
+## 🛠️ Stack Technique  
+
+| Catégorie | Technologies |
+|------------|---------------|
+| Framework | **Next.js 15 (App Router)** |
+| Langage | **TypeScript** |
+| UI | **Tailwind CSS**, **Framer Motion**, **Lucide React** |
+| Base de données | **PostgreSQL** |
+| Authentification | **JWT** |
+| Upload | **Multer + File System** |
+
+---
+
+## 📁 Structure du Projet  
+
+```bash
 portfolio/
 ├── app/
-│   ├── admin/                    # Interface d'administration
-│   │   └── page.tsx
-│   ├── api/                      # API Routes
-│   │   ├── auth/                 # Authentification
-│   │   ├── documents/            # Gestion des documents
-│   │   ├── diplomas/             # Gestion des diplômes
-│   │   ├── projects/             # Gestion des projets
-│   │   ├── technologies/         # Gestion des technologies
-│   │   └── profile/              # Profil utilisateur
-│   ├── globals.css
+│   ├── admin/             # Interface d’administration
+│   ├── api/               # API Routes
+│   │   ├── auth/          # Authentification
+│   │   ├── documents/     # Documents
+│   │   ├── diplomas/      # Diplômes
+│   │   ├── projects/      # Projets
+│   │   ├── technologies/  # Technologies
+│   │   └── profile/       # Profil utilisateur
 │   ├── layout.tsx
 │   ├── page.tsx
-│   ├── projets/
-│   └── contact/
+│   └── projets/, contact/
 ├── components/
-│   ├── admin/                    # Composants d'administration
-│   │   ├── DocumentManager.tsx   # Gestionnaire de documents
-│   │   ├── ProfileManager.tsx    # Gestion du profil
-│   │   ├── FeaturedProjectsManager.tsx
-│   │   └── AdminSidebar.tsx
-│   ├── sections/                 # Sections de la page d'accueil
-│   ├── ui/                       # Composants UI réutilisables
-│   ├── Navbar.tsx
-│   ├── Footer.tsx
-│   └── ...
-├── lib/
-│   ├── database-postgres.ts      # Configuration PostgreSQL
-│   ├── auth.ts                   # Authentification
-│   ├── analytics.ts              # Analytics
-│   └── utils.ts
-├── contexts/
-│   ├── NotificationContext.tsx   # Système de notifications
-│   └── ProfileContext.tsx        # Contexte du profil
-├── hooks/
-│   └── useAnalytics.ts           # Hook pour les analytics
-├── scripts/                      # Scripts d'initialisation
-│   ├── init-postgres-simple.cjs
-│   ├── sync-diplomas-to-documents.cjs
-│   └── ...
-├── public/
-│   ├── cv/                       # Fichiers CV
-│   ├── diplomas/                 # Fichiers de diplômes
-│   ├── mes-documents/             # Documents généraux
-│   └── downloads/               # Fichiers téléchargeables
+│   ├── admin/, sections/, ui/
+│   ├── Navbar.tsx, Footer.tsx
+├── lib/, contexts/, hooks/
+├── scripts/               # Scripts d’init & sync
+├── public/                # Ressources statiques
 └── README.md
-```
+````
 
-## 🚀 Installation Rapide
+---
 
-### 1. **Prérequis**
-- Node.js 18+ 
-- PostgreSQL 12+
+## ⚡ Installation Rapide
 
-### 2. **Installation**
+### 1️⃣ Prérequis
+
+* Node.js ≥ 18
+* PostgreSQL ≥ 12
+
+### 2️⃣ Installation
+
 ```bash
-# Cloner et installer
 git clone https://github.com/Krzanowski-Ambroise/modern-portfolio-template.git
 cd modern-portfolio-template
 npm install
+```
 
-# Configurer la base de données
+Configurer la base :
+
+```bash
 createdb portfolio
 cp config.example.js .env.local
-# Éditer .env.local avec vos paramètres
-
-# Initialiser la DB
+# Modifier .env.local
 node scripts/init-postgres-simple.cjs
-
-# Lancer le serveur
 npm run dev
 ```
 
-### 3. **Accès**
-- **Portfolio** : http://localhost:3000
-- **Admin** : http://localhost:3000/admin
+### 3️⃣ Accès
 
-## 📱 Pages Disponibles
+* 🌐 **Portfolio** : [http://localhost:3000](http://localhost:3000)
+* 🔐 **Admin** : [http://localhost:3000/admin](http://localhost:3000/admin)
 
-### Interface Publique
-- **/** : Page d'accueil avec hero, compétences et projets
-- **/projets** : Galerie interactive des projets
-- **/contact** : Formulaire de contact animé
+---
 
-### Interface d'Administration
-- **/admin** : Dashboard principal
-  - Gestionnaire de documents avec navigation par dossiers
-  - Gestion des diplômes et synchronisation automatique
-  - Gestion des projets avec upload d'images
-  - Gestion des technologies et compétences
-  - Gestion du profil utilisateur
+## 📂 Pages Principales
 
-## 🖼️ Captures d'Écran
+| Section | URL        | Description                |
+| ------- | ---------- | -------------------------- |
+| Accueil | `/`        | Hero, compétences, projets |
+| Projets | `/projets` | Galerie interactive        |
+| Contact | `/contact` | Formulaire animé           |
+| Admin   | `/admin`   | Tableau de bord complet    |
 
-### Page d'Accueil
-Interface moderne avec hero section animée, affichage des technologies maîtrisées, galerie interactive des réalisations, et formulaire de contact animé avec validation.
+---
 
-### Interface d'Administration
-Dashboard avec navigation intuitive (breadcrumb et bouton de retour), gestion de fichiers (upload drag & drop, sélection multiple), dossiers sécurisés pour la protection des documents sensibles, et synchronisation automatique des diplômes.
+## 🔐 Authentification & Sécurité
 
-## 🔐 Système d'Authentification
+* 🔑 **JWT Tokens** + sessions persistantes
+* 🧱 **Middleware de protection** des routes sensibles
+* 🧩 **Validation stricte** des fichiers uploadés
+* 🧰 **Limitation de taille** et scan de sécurité
+* 🔒 **Dossiers sécurisés** pour données sensibles
 
-Accès admin via `/admin` avec authentification JWT et session persistante. Protection des routes sensibles avec dossiers sécurisés (🔒) pour accès restreint, fichiers protégés en téléchargement uniquement, et actions conditionnelles selon les permissions.
-
-## 📊 Gestionnaire de Documents
-
-Navigation par dossiers avec interface type explorateur de fichiers, upload drag & drop, sélection multiple pour actions en masse, recherche et filtrage avancés, breadcrumb navigation claire, et cache intelligent pour des performances optimales.
-
-**Structure** : Mes Documents (racine) → Mes CV (sécurisé) + Mes Diplômes (sécurisé) avec sous-dossiers par diplôme, plus documents généraux. Support des formats PDF, DOC, DOCX, TXT, PNG, JPG, JPEG, GIF, SVG.
+---
 
 ## 🎓 Gestion des Diplômes
 
-Synchronisation automatique avec création de dossiers pour chaque diplôme, nommage intelligent `[Titre] - [Date]`, association de tous les fichiers liés, et bouton "Sync Diplômes" dans le dossier "Mes Diplômes". Interface de gestion complète avec CRUD, upload multiple de fichiers par diplôme, métadonnées (titre, date, description), et prévisualisation des fichiers.
+* 📂 Création automatique de dossiers dédiés
+* 📸 Upload multiple et métadonnées (titre, date, description)
+* 🔄 Synchronisation automatique (`Sync Diplômes`)
+* 🧠 Nommage intelligent `[Titre] - [Date]`
+* 👁️ Prévisualisation intégrée
 
-## 🚀 Gestion des Projets
+---
 
-Galerie interactive avec filtres, upload d'images de couverture et galeries, technologies associées avec tags et compétences, gestion des statuts (en cours, terminés, archivés), et liens externes (GitHub, démo, documentation). Interface admin complète avec CRUD intuitif, upload drag & drop pour les images, gestion des technologies, et prévisualisation en temps réel.
+## 🗂️ Gestionnaire de Documents
 
-## 🎯 Composants UI
+* 🪶 Interface type explorateur
+* 📤 Upload **drag & drop** + actions multiples
+* 🔍 Recherche, filtrage, breadcrumb clair
+* ⚡ Cache intelligent & pagination
+* 📄 Formats supportés : `PDF`, `DOC`, `TXT`, `PNG`, `JPG`, `SVG`, `GIF`
 
-### Composants de Base
-- `Button` : Boutons avec animations
-- `Card` : Cartes avec effets glassmorphism
-- `Input` : Champs de saisie stylisés
-- `Modal` : Modales avec animations
-- `Notification` : Système de notifications
+---
 
-### Composants Avancés
-- `AnimatedCounter` : Compteurs animés
-- `Typewriter` : Effet machine à écrire
-- `GlitchText` : Texte avec effet glitch
-- `ParticleField` : Champ de particules animées
-- `MatrixRain` : Effet pluie de code Matrix
+## 🖼️ Gestion des Projets
 
-### Composants Admin
-- `DocumentManager` : Gestionnaire de documents complet
-- `ProfileManager` : Gestion du profil utilisateur
-- `FeaturedProjectsManager` : Gestion des projets mis en avant
-- `AdminSidebar` : Navigation d'administration
+* 🧱 Galerie interactive filtrable
+* 🖼️ Upload d’images & galeries
+* 🏷️ Association de technologies & compétences
+* 🔗 Liens externes (GitHub, démo, doc)
+* ⚙️ CRUD intuitif avec prévisualisation en temps réel
+
+---
+
+## 🧩 Composants UI
+
+### 🧱 De Base
+
+`Button`, `Card`, `Input`, `Modal`, `Notification`
+
+### ⚡ Avancés
+
+`AnimatedCounter`, `Typewriter`, `GlitchText`, `ParticleField`, `MatrixRain`
+
+### 🔧 Admin
+
+`DocumentManager`, `ProfileManager`, `FeaturedProjectsManager`, `AdminSidebar`
+
+---
 
 ## 🎨 Personnalisation
 
-### Couleurs
 Modifiez les couleurs dans `tailwind.config.js` :
 
-```javascript
+```js
 colors: {
-  primary: {
-    cyan: '#00D4FF',
-    violet: '#B794F6',
-    pink: '#F093FB',
-  },
+  primary: { cyan: '#00D4FF', violet: '#B794F6', pink: '#F093FB' },
   background: '#000000',
-  text: {
-    primary: '#FFFFFF',
-    secondary: '#A1A1AA',
-  }
+  text: { primary: '#FFFFFF', secondary: '#A1A1AA' }
 }
 ```
 
-### Base de Données
-Structure des tables principales :
-- `profiles` : Informations utilisateur
-- `projects` : Projets et métadonnées
-- `technologies` : Technologies et compétences
-- `diplomas` : Diplômes et certifications
-- `diploma_files` : Fichiers associés aux diplômes
-- `document_folders` : Structure des dossiers
-- `documents` : Fichiers et métadonnées
-- `cv_files` : Gestion des CV
+---
 
-## 📊 Performance
+## 📊 Performances
 
-- **Images optimisées** avec Next.js Image
-- **Lazy loading** des composants
-- **Animations GPU-accelerated**
-- **Code splitting** automatique
-- **Bundle optimization**
-- **Cache intelligent** pour les documents
-- **Pagination** pour les grandes listes
+* ⚙️ **Optimisation Next.js Image**
+* 🚀 **Lazy loading & code splitting**
+* 🧠 **Animations GPU-accelerated**
+* 🧩 **Cache intelligent & pagination**
 
-## 🔧 Scripts Disponibles
+---
+
+## 🧰 Scripts Disponibles
 
 ```bash
 # Développement
-npm run dev              # Serveur de développement
-npm run build           # Build de production
-npm run start           # Serveur de production
-npm run lint            # Linting du code
+npm run dev
+npm run build
+npm run start
+npm run lint
 
 # Base de données
-node scripts/init-postgres-simple.cjs        # Initialiser la DB
-node scripts/sync-diplomas-to-documents.cjs  # Sync diplômes
-node scripts/cleanup-diploma-folders.cjs     # Nettoyer les dossiers
+node scripts/init-postgres-simple.cjs
+node scripts/sync-diplomas-to-documents.cjs
 ```
 
-## 🚀 Déploiement
+---
 
-### Vercel (Recommandé)
+## ☁️ Déploiement
+
+### 🟢 Vercel (Recommandé)
+
 ```bash
 npm run build
 vercel --prod
 ```
 
-### Variables d'environnement de production
+### ⚙️ Variables d’Environnement
+
 ```env
 DATABASE_URL=postgresql://user:pass@host:5432/db
 JWT_SECRET=your_production_secret
 ```
 
-### Docker
+### 🐳 Docker
+
 ```dockerfile
 FROM node:18-alpine
 WORKDIR /app
@@ -263,98 +296,53 @@ EXPOSE 3000
 CMD ["npm", "start"]
 ```
 
-## 🔒 Sécurité
-
-### Authentification
-- **JWT Tokens** : Authentification sécurisée
-- **Sessions persistantes** : Connexion maintenue
-- **Protection des routes** : Middleware d'authentification
-
-### Gestion des Fichiers
-- **Validation des types** : Types de fichiers autorisés
-- **Taille limitée** : Limitation de la taille des uploads
-- **Scan de sécurité** : Vérification des fichiers uploadés
-- **Dossiers protégés** : Accès restreint aux dossiers sensibles
-
-## 📝 Utilisation
-
-### Pour les Développeurs
-1. **Fork le projet** sur GitHub
-2. **Cloner votre fork** localement
-3. **Configurer la base de données** PostgreSQL
-4. **Installer les dépendances** avec `npm install`
-5. **Initialiser la DB** avec les scripts fournis
-6. **Lancer le serveur** avec `npm run dev`
-
-### Pour les Utilisateurs
-1. **Accéder à l'interface** via `/admin`
-2. **Se connecter** avec les identifiants admin
-3. **Gérer les documents** dans le gestionnaire
-4. **Synchroniser les diplômes** automatiquement
-5. **Gérer les projets** et technologies
-
-## 🌟 Fonctionnalités Avancées
-
-### Animations
-- Parallax scrolling
-- Mouse follower effect
-- Intersection Observer
-- Stagger animations
-- Scroll-triggered animations
-
-### Responsive
-- Mobile-first design
-- Breakpoints adaptatifs
-- Grilles flexibles
-- Images responsives
-
-### Accessibilité
-- Navigation au clavier
-- Contraste optimisé
-- ARIA labels
-- Focus management
-
-## 📞 Support
-
-Pour toute question ou support :
-- **Documentation** : README complet avec exemples
-- **Issues GitHub** : [Créer une issue](https://github.com/username/portfolio/issues)
-- **Scripts d'aide** : Scripts d'initialisation inclus
-
-## 📝 Licence
-
-MIT License - Voir le fichier LICENSE pour plus de détails.
+---
 
 ## 🤝 Contribution
 
-Les contributions sont les bienvenues ! N'hésitez pas à :
 1. Fork le projet
-2. Créer une branche feature (`git checkout -b feature/AmazingFeature`)
-3. Commit vos changements (`git commit -m 'Add some AmazingFeature'`)
-4. Push vers la branche (`git push origin feature/AmazingFeature`)
-5. Ouvrir une Pull Request
-
-## 🤖 Développement Collaboratif
-
-Ce projet a été développé en **collaboration étroite entre humain et IA** :
-
-### 🧠 **VibeCoding avec Claude AI**
-- **Approche collaborative** : Développement en binôme humain-IA
-- **Itération rapide** : Feedback continu et améliorations instantanées
-- **Résolution de problèmes** : Solutions innovantes grâce à la collaboration
-- **Code quality** : Standards élevés grâce à l'assistance IA
-
-### 🎯 **Prochaines Évolutions**
-- **Système de Blog** : Articles sur les découvertes, guides d'installation, tutoriels
-- **Système de Connexion** : Authentification utilisateur pour accéder au blog
-- **API REST complète** : Endpoints pour intégrations externes
-- **Recherche avancée** : Recherche full-text dans les documents et articles
-- **Système de rôles** : Multi-utilisateurs avec permissions
-- **Analytics** : Statistiques d'utilisation et de performance
-- **Collaboration** : Partage de dossiers et articles entre utilisateurs
+2. Crée ta branche `feature/YourFeature`
+3. Commit : `git commit -m 'Add YourFeature'`
+4. Push : `git push origin feature/YourFeature`
+5. Ouvre une **Pull Request** 🎉
 
 ---
 
-**Développé avec ❤️ par Ambroise Krzanowski**
+## 🤖 Collaboration IA
 
-*Portfolio professionnel avec système de gestion de documents intégré - Créé en collaboration avec Claude AI en mode VibeCoding*
+### 🧠 VibeCoding avec Claude AI
+
+* 🤝 Développement en binôme humain + IA
+* ⚡ Itération rapide & feedback continu
+* 🧩 Résolution de problèmes créative
+* 💎 Code propre & maintenable
+
+### 🔮 Prochaines Évolutions
+
+* 📝 Système de blog intégré
+* 👤 Authentification utilisateur pour le blog
+* 🔍 Recherche full-text
+* 🧠 Analytics et statistiques d’usage
+* 🔐 Système de rôles multi-utilisateurs
+
+---
+
+## 📜 Licence
+
+🪪 **MIT License** — voir le fichier [LICENSE](LICENSE).
+
+---
+
+<h3 align="center">💼 Développé avec ❤️ par <strong>Ambroise Krzanowski</strong></h3>
+
+<p align="center"><em>Portfolio cybersécurité avec gestion de documents intégrée — créé en collaboration avec Claude AI (VibeCoding)</em></p>
+
+---
+
+```
+
+---
+
+Souhaites-tu que je t’ajoute **une section “Live Demo”** (avec badge Vercel, lien démo et aperçu GIF du site) juste sous le titre ?  
+Ça donne un look encore plus “pro produit SaaS / portfolio dev” sur GitHub.
+```
