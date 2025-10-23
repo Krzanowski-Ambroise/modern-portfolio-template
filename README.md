@@ -1,4 +1,4 @@
-# Portfolio Cybersécurité Ultra-Moderne
+# 🚀 Portfolio Cybersécurité Ultra-Moderne
 
 Un portfolio professionnel spectaculaire développé avec **Next.js 15**, **TypeScript** et **Tailwind CSS**. Inclut un système complet de gestion de documents, diplômes et projets avec interface d'administration.
 
@@ -14,7 +14,7 @@ Un portfolio professionnel spectaculaire développé avec **Next.js 15**, **Type
 ![Dashboard Admin](gitimg/exemple_dashboard.png)
 *Gestionnaire de documents avec navigation par dossiers*
 
-## Fonctionnalités
+## ✨ Fonctionnalités
 
 ### Interface Publique
 Interface moderne inspirée d'Apple avec effets glassmorphism, animations fluides grâce à Framer Motion, et design responsive optimisé pour tous les appareils. Performance optimale avec images optimisées, lazy loading, et effets visuels spectaculaires (background animé, particules, effets de glitch).
@@ -22,7 +22,7 @@ Interface moderne inspirée d'Apple avec effets glassmorphism, animations fluide
 ### Interface d'Administration
 Gestionnaire de documents complet avec navigation par dossiers, upload drag & drop, et sélection multiple. Système de gestion des diplômes avec CRUD complet et synchronisation automatique. Gestion des projets avec images et technologies associées. Sécurité renforcée avec dossiers protégés et authentification JWT, le tout optimisé par un système de cache intelligent.
 
-## Palette de Couleurs
+## 🎨 Palette de Couleurs
 
 | Couleur | Code | Usage |
 |---------|------|-------|
@@ -35,7 +35,7 @@ Gestionnaire de documents complet avec navigation par dossiers, upload drag & dr
 
 > **Effets glassmorphism** : `rgba(255,255,255,0.08)` + `blur(14px)` pour un rendu moderne et élégant
 
-## Stack Technique
+## 🛠️ Stack Technique
 
 - **Framework** : Next.js 15 (App Router)
 - **Language** : TypeScript
@@ -46,7 +46,7 @@ Gestionnaire de documents complet avec navigation par dossiers, upload drag & dr
 - **Authentification** : JWT
 - **Upload** : Multer + File System
 
-## Structure du Projet
+## 📁 Structure du Projet
 
 ```
 portfolio/
@@ -98,7 +98,7 @@ portfolio/
 └── README.md
 ```
 
-## Installation Rapide
+## 🚀 Installation Rapide
 
 ### 1. **Prérequis**
 - Node.js 18+ 
@@ -127,7 +127,7 @@ npm run dev
 - **Portfolio** : http://localhost:3000
 - **Admin** : http://localhost:3000/admin
 
-## Pages Disponibles
+## 📱 Pages Disponibles
 
 ### Interface Publique
 - **/** : Page d'accueil avec hero, compétences et projets
@@ -142,7 +142,7 @@ npm run dev
   - Gestion des technologies et compétences
   - Gestion du profil utilisateur
 
-## Captures d'Écran
+## 🖼️ Captures d'Écran
 
 ### Page d'Accueil
 Interface moderne avec hero section animée, affichage des technologies maîtrisées, galerie interactive des réalisations, et formulaire de contact animé avec validation.
@@ -150,25 +150,25 @@ Interface moderne avec hero section animée, affichage des technologies maîtris
 ### Interface d'Administration
 Dashboard avec navigation intuitive (breadcrumb et bouton de retour), gestion de fichiers (upload drag & drop, sélection multiple), dossiers sécurisés pour la protection des documents sensibles, et synchronisation automatique des diplômes.
 
-## Système d'Authentification
+## 🔐 Système d'Authentification
 
 Accès admin via `/admin` avec authentification JWT et session persistante. Protection des routes sensibles avec dossiers sécurisés (🔒) pour accès restreint, fichiers protégés en téléchargement uniquement, et actions conditionnelles selon les permissions.
 
-## Gestionnaire de Documents
+## 📊 Gestionnaire de Documents
 
 Navigation par dossiers avec interface type explorateur de fichiers, upload drag & drop, sélection multiple pour actions en masse, recherche et filtrage avancés, breadcrumb navigation claire, et cache intelligent pour des performances optimales.
 
 **Structure** : Mes Documents (racine) → Mes CV (sécurisé) + Mes Diplômes (sécurisé) avec sous-dossiers par diplôme, plus documents généraux. Support des formats PDF, DOC, DOCX, TXT, PNG, JPG, JPEG, GIF, SVG.
 
-## Gestion des Diplômes
+## 🎓 Gestion des Diplômes
 
 Synchronisation automatique avec création de dossiers pour chaque diplôme, nommage intelligent `[Titre] - [Date]`, association de tous les fichiers liés, et bouton "Sync Diplômes" dans le dossier "Mes Diplômes". Interface de gestion complète avec CRUD, upload multiple de fichiers par diplôme, métadonnées (titre, date, description), et prévisualisation des fichiers.
 
-## Gestion des Projets
+## 🚀 Gestion des Projets
 
 Galerie interactive avec filtres, upload d'images de couverture et galeries, technologies associées avec tags et compétences, gestion des statuts (en cours, terminés, archivés), et liens externes (GitHub, démo, documentation). Interface admin complète avec CRUD intuitif, upload drag & drop pour les images, gestion des technologies, et prévisualisation en temps réel.
 
-## Composants UI
+## 🎯 Composants UI
 
 ### Composants de Base
 - `Button` : Boutons avec animations
@@ -190,7 +190,7 @@ Galerie interactive avec filtres, upload d'images de couverture et galeries, tec
 - `FeaturedProjectsManager` : Gestion des projets mis en avant
 - `AdminSidebar` : Navigation d'administration
 
-## Personnalisation
+## 🎨 Personnalisation
 
 ### Couleurs
 Modifiez les couleurs dans `tailwind.config.js` :
@@ -221,7 +221,7 @@ Structure des tables principales :
 - `documents` : Fichiers et métadonnées
 - `cv_files` : Gestion des CV
 
-## Performance
+## 📊 Performance
 
 - **Images optimisées** avec Next.js Image
 - **Lazy loading** des composants
@@ -231,7 +231,7 @@ Structure des tables principales :
 - **Cache intelligent** pour les documents
 - **Pagination** pour les grandes listes
 
-## Scripts Disponibles
+## 🔧 Scripts Disponibles
 
 ```bash
 # Développement
@@ -246,7 +246,7 @@ node scripts/sync-diplomas-to-documents.cjs  # Sync diplômes
 node scripts/cleanup-diploma-folders.cjs     # Nettoyer les dossiers
 ```
 
-## Déploiement
+## 🚀 Déploiement
 
 ### Vercel (Recommandé)
 ```bash
@@ -272,7 +272,7 @@ EXPOSE 3000
 CMD ["npm", "start"]
 ```
 
-## Sécurité
+## 🔒 Sécurité
 
 ### Authentification
 - **JWT Tokens** : Authentification sécurisée
@@ -285,7 +285,7 @@ CMD ["npm", "start"]
 - **Scan de sécurité** : Vérification des fichiers uploadés
 - **Dossiers protégés** : Accès restreint aux dossiers sensibles
 
-## Utilisation
+## 📝 Utilisation
 
 ### Pour les Développeurs
 1. **Fork le projet** sur GitHub
@@ -302,7 +302,7 @@ CMD ["npm", "start"]
 4. **Synchroniser les diplômes** automatiquement
 5. **Gérer les projets** et technologies
 
-## Fonctionnalités Avancées
+## 🌟 Fonctionnalités Avancées
 
 ### Animations
 - **Parallax scrolling** : Effet de profondeur
@@ -323,18 +323,18 @@ CMD ["npm", "start"]
 - **ARIA labels** : Descriptions pour lecteurs d'écran
 - **Focus management** : Gestion du focus
 
-## Support
+## 📞 Support
 
 Pour toute question ou support :
 - **Documentation** : README complet avec exemples
 - **Issues GitHub** : [Créer une issue](https://github.com/username/portfolio/issues)
 - **Scripts d'aide** : Scripts d'initialisation inclus
 
-## Licence
+## 📄 Licence
 
 MIT License - Voir le fichier LICENSE pour plus de détails.
 
-## Contribution
+## 🤝 Contribution
 
 Les contributions sont les bienvenues ! N'hésitez pas à :
 1. Fork le projet
@@ -343,7 +343,7 @@ Les contributions sont les bienvenues ! N'hésitez pas à :
 4. Push vers la branche (`git push origin feature/AmazingFeature`)
 5. Ouvrir une Pull Request
 
-## Développement Collaboratif
+## 🤖 Développement Collaboratif
 
 Ce projet a été développé en **collaboration étroite entre humain et IA** :
 
