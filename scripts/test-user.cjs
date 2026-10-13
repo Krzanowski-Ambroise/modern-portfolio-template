@@ -1,19 +1,20 @@
 const { Pool } = require('pg')
+const pgConfig = require('./pg-config.cjs')
 const bcrypt = require('bcryptjs')
 
 // Configuration de la base de données PostgreSQL
-const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'portfolio',
-  password: 'q8a6dEpWMu',
-  port: 5432,
-})
+const pool = new Pool(pgConfig)
 
 async function testUser() {
   try {
     console.log('🔄 Test de l\'utilisateur admin...')
-    
+
+    const adminPassword = process.env.ADMIN_PASSWORD
+    if (!adminPassword) {
+      console.log('❌ ADMIN_PASSWORD non défini (voir .env.example)')
+      return
+    }
+
     const client = await pool.connect()
     
     // Vérifier si l'utilisateur admin existe
@@ -24,7 +25,7 @@ async function testUser() {
       
       // Créer l'utilisateur admin
       console.log('🔄 Création de l\'utilisateur admin...')
-      const hashedPassword = bcrypt.hashSync('admin123', 10)
+      const hashedPassword = bcrypt.hashSync(adminPassword, 10)
       await client.query('INSERT INTO users (username, password) VALUES ($1, $2)', ['admin', hashedPassword])
       console.log('✅ Utilisateur admin créé')
     } else {
@@ -32,7 +33,7 @@ async function testUser() {
       
       // Tester le mot de passe
       const user = result.rows[0]
-      const isPasswordValid = bcrypt.compareSync('admin123', user.password)
+      const isPasswordValid = bcrypt.compareSync(adminPassword, user.password)
       console.log('🔐 Test du mot de passe:', isPasswordValid ? '✅ Valide' : '❌ Invalide')
     }
     

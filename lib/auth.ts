@@ -1,7 +1,14 @@
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 
-const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production'
+// Secret de signature des tokens, lu depuis l'environnement (voir .env.example)
+function getJwtSecret(): string {
+  const secret = process.env.JWT_SECRET
+  if (!secret) {
+    throw new Error('JWT_SECRET is not set')
+  }
+  return secret
+}
 
 export interface User {
   id: number
@@ -24,12 +31,12 @@ export function verifyPassword(password: string, hashedPassword: string): boolea
 }
 
 export function generateToken(userId: number): string {
-  return jwt.sign({ userId }, JWT_SECRET, { expiresIn: '24h' })
+  return jwt.sign({ userId }, getJwtSecret(), { expiresIn: '24h' })
 }
 
 export function verifyToken(token: string): { userId: number } | null {
   try {
-    return jwt.verify(token, JWT_SECRET) as { userId: number }
+    return jwt.verify(token, getJwtSecret()) as { userId: number }
   } catch {
     return null
   }

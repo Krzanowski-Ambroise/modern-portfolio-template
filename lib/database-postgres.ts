@@ -1,13 +1,17 @@
 import { Pool, PoolClient } from 'pg'
 import bcrypt from 'bcryptjs'
 
-// Configuration de la base de données PostgreSQL
+// Configuration de la base de données PostgreSQL, lue depuis l'environnement (voir .env.example)
+export const pgConfig = {
+  user: process.env.PGUSER,
+  host: process.env.PGHOST || 'localhost',
+  database: process.env.PGDATABASE || 'portfolio',
+  password: process.env.PGPASSWORD,
+  port: Number(process.env.PGPORT) || 5432,
+}
+
 const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'portfolio',
-  password: 'q8a6dEpWMu',
-  port: 5432,
+  ...pgConfig,
   max: 20,
   idleTimeoutMillis: 30000,
   connectionTimeoutMillis: 2000,
@@ -302,12 +306,16 @@ export async function initDatabase(): Promise<void> {
       )
     `)
 
-    // Vérifier si l'utilisateur admin existe
+    // Vérifier si l'utilisateur admin existe (créé avec le mot de passe ADMIN_PASSWORD)
     const adminExists = await query('SELECT id FROM users WHERE username = $1', ['admin'])
-    
+
     if (adminExists.rows.length === 0) {
-      const hashedPassword = bcrypt.hashSync('admin123', 10)
-      await query('INSERT INTO users (username, password) VALUES ($1, $2)', ['admin', hashedPassword])
+      if (process.env.ADMIN_PASSWORD) {
+        const hashedPassword = bcrypt.hashSync(process.env.ADMIN_PASSWORD, 10)
+        await query('INSERT INTO users (username, password) VALUES ($1, $2)', ['admin', hashedPassword])
+      } else {
+        console.warn('ADMIN_PASSWORD non défini : utilisateur admin non créé (voir .env.example)')
+      }
     }
 
     // Insérer les catégories par défaut

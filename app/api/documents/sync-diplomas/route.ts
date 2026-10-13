@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { verifyToken } from '@/lib/auth'
-import { getAllDiplomas, getDiplomaFiles } from '@/lib/database-postgres'
+import { getAllDiplomas, getDiplomaFiles, pgConfig } from '@/lib/database-postgres'
 
 // POST - Synchroniser les diplômes avec les documents
 export async function POST(request: NextRequest) {
@@ -18,13 +18,7 @@ export async function POST(request: NextRequest) {
 
     // Récupérer l'ID du dossier "Mes Documents"
     const { Pool } = require('pg')
-    const pool = new Pool({
-      user: 'postgres',
-      host: 'localhost',
-      database: 'portfolio',
-      password: 'q8a6dEpWMu',
-      port: 5432,
-    })
+    const pool = new Pool(pgConfig)
 
     const mesDiplomesResult = await pool.query(`
       SELECT id FROM document_folders 

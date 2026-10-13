@@ -54,11 +54,11 @@ export async function initDatabase() {
       )
     `)
 
-    // Insérer un utilisateur admin par défaut (mot de passe: admin123)
+    // Insérer un utilisateur admin par défaut (mot de passe: variable d'environnement ADMIN_PASSWORD)
     const adminExists = await dbGet('SELECT id FROM users WHERE username = ?', ['admin'])
-    if (!adminExists) {
+    if (!adminExists && process.env.ADMIN_PASSWORD) {
       const bcrypt = require('bcryptjs')
-      const hashedPassword = bcrypt.hashSync('admin123', 10)
+      const hashedPassword = bcrypt.hashSync(process.env.ADMIN_PASSWORD, 10)
       await dbRun('INSERT INTO users (username, password) VALUES (?, ?)', ['admin', hashedPassword])
     }
 

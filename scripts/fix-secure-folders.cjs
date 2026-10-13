@@ -1,12 +1,7 @@
 const { Pool } = require('pg')
+const pgConfig = require('./pg-config.cjs')
 
-const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'portfolio',
-  password: 'q8a6dEpWMu',
-  port: 5432,
-})
+const pool = new Pool(pgConfig)
 
 async function fixSecureFolders() {
   const client = await pool.connect()

@@ -113,19 +113,31 @@ npm install
 
 # Configurer la base de données
 createdb portfolio
-cp config.example.js .env.local
-# Éditer .env.local avec vos paramètres
+cp .env.example .env.local
+# Éditer .env.local avec vos propres valeurs (voir ci-dessous)
 
-# Initialiser la DB
-node scripts/init-postgres-simple.cjs
+# Initialiser la DB (Node.js 20.6+ pour --env-file)
+node --env-file=.env.local scripts/init-postgres-simple.cjs
 
 # Lancer le serveur
 npm run dev
 ```
 
-### 3. **Accès**
+### 3. **Configuration**
+Aucun identifiant n'est écrit dans le code : tout se lit depuis l'environnement. Copiez `.env.example` vers `.env.local` (ignoré par git) et renseignez :
+
+| Variable | Rôle | Défaut |
+|----------|------|--------|
+| `PGHOST` / `PGPORT` / `PGDATABASE` | Serveur, port et nom de la base | `localhost` / `5432` / `portfolio` |
+| `PGUSER` / `PGPASSWORD` | Vos identifiants PostgreSQL | — |
+| `JWT_SECRET` | Secret de signature des tokens admin (longue chaîne aléatoire) | — |
+| `ADMIN_PASSWORD` | Mot de passe du compte `admin`, utilisé à sa création | — |
+
+Next.js charge `.env.local` automatiquement ; les scripts le lisent avec `node --env-file=.env.local scripts/<script>.cjs`. Le compte `admin` est créé à l'initialisation avec `ADMIN_PASSWORD` s'il n'existe pas encore ; pour changer son mot de passe, voir [README-POSTGRES.md](README-POSTGRES.md#changer-le-mot-de-passe-admin).
+
+### 4. **Accès**
 - **Portfolio** : http://localhost:3000
-- **Admin** : http://localhost:3000/admin
+- **Admin** : http://localhost:3000/admin (utilisateur `admin`, mot de passe défini par `ADMIN_PASSWORD`)
 
 ## 📱 Pages Disponibles
 
@@ -240,10 +252,10 @@ npm run build           # Build de production
 npm run start           # Serveur de production
 npm run lint            # Linting du code
 
-# Base de données
-node scripts/init-postgres-simple.cjs        # Initialiser la DB
-node scripts/sync-diplomas-to-documents.cjs  # Sync diplômes
-node scripts/cleanup-diploma-folders.cjs     # Nettoyer les dossiers
+# Base de données (connexion lue depuis .env.local)
+node --env-file=.env.local scripts/init-postgres-simple.cjs        # Initialiser la DB
+node --env-file=.env.local scripts/sync-diplomas-to-documents.cjs  # Sync diplômes
+node --env-file=.env.local scripts/cleanup-diploma-folders.cjs     # Nettoyer les dossiers
 ```
 
 ## 🚀 Déploiement
@@ -255,10 +267,7 @@ vercel --prod
 ```
 
 ### Variables d'environnement de production
-```env
-DATABASE_URL=postgresql://user:pass@host:5432/db
-JWT_SECRET=your_production_secret
-```
+Définissez dans votre hébergeur les mêmes variables que `.env.example` (`PGHOST`, `PGPORT`, `PGDATABASE`, `PGUSER`, `PGPASSWORD`, `JWT_SECRET`, et `ADMIN_PASSWORD` le temps de créer le compte admin), avec des valeurs propres à la production, jamais commitées.
 
 ### Docker
 ```dockerfile

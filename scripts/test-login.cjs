@@ -11,7 +11,7 @@ async function testLogin() {
       },
       body: JSON.stringify({
         username: 'admin',
-        password: 'admin123'
+        password: process.env.ADMIN_PASSWORD
       })
     })
     

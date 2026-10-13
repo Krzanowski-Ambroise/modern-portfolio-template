@@ -1,14 +1,9 @@
 const { Pool } = require('pg')
+const pgConfig = require('./pg-config.cjs')
 const fs = require('fs').promises
 const path = require('path')
 
-const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'portfolio',
-  password: 'q8a6dEpWMu',
-  port: 5432,
-})
+const pool = new Pool(pgConfig)
 
 async function syncDiplomasToDocuments() {
   try {

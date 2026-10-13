@@ -1,17 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { getAllDiplomas, createDiploma, updateDiploma, deleteDiploma, getDiplomaFiles } from '@/lib/database-postgres'
+import { getAllDiplomas, createDiploma, updateDiploma, deleteDiploma, getDiplomaFiles, pgConfig } from '@/lib/database-postgres'
 import { verifyToken } from '@/lib/auth'
 
 // Fonction pour synchroniser un diplôme spécifique avec les documents
 async function syncDiplomaToDocuments(diplomaId: number) {
   const { Pool } = require('pg')
-  const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'portfolio',
-    password: 'q8a6dEpWMu',
-    port: 5432,
-  })
+  const pool = new Pool(pgConfig)
 
   try {
     // Récupérer le diplôme

@@ -2,7 +2,7 @@ const http = require('http')
 
 const postData = JSON.stringify({
   username: 'admin',
-  password: 'admin123'
+  password: process.env.ADMIN_PASSWORD
 })
 
 const options = {
